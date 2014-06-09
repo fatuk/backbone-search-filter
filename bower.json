@@ -1,0 +1,20 @@
+{
+  "name": "workouts",
+  "version": "0.0.0",
+  "authors": [
+    "fatuk <fatukk@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.11.1",
+    "backbone": "~1.1.2"
+  }
+}
