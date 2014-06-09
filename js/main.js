@@ -4,6 +4,14 @@ $(function () {
 	App.Models = {};
 	App.Collections = {};
 
+	var persons = [];
+
+	for (var i = 0; i < 100; i++) {
+		persons.push(Faker.Helpers.userCard());
+		persons[i].avatar = Faker.random.avatar_uri();
+	}
+
+
 	App.Views.App = Backbone.View.extend({
 		el: '#app'
 	});
