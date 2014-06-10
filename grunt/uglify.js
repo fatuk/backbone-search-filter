@@ -6,8 +6,11 @@ module.exports = {
         files: {
             'js/plugins.min.js': [
                 'bower_components/jquery/dist/jquery.js',
-                'bower_components/WOW/dist/wow.js',
-                'bower_components/jQuery-Open-Carousel/jquery.openCarousel.js'
+                'bower_components/Faker/Faker.js',
+                'bower_components/type-watch/jquery.typewatch.js',
+                'bower_components/underscore/underscore.js',
+                'bower_components/backbone/backbone.js',
+                'bower_components/mustache/mustache.js'
             ]
         }
     }
