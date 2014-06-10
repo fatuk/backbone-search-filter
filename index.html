@@ -5,14 +5,45 @@
 	<title>Search and filter on backbone</title>
 	<link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body id="app">
 	<div class="container">
 		<h1>Persons</h1>
-		<div id="app"></div>
+		<!-- Search -->
+		<div class="search">
+			<input type="text" class="input input_search" id="searchInput">
+			<button class="btn" id="searchBtn">Search</button>
+			<span class="search__count js-searchCount"></span>
+		</div>
+		<div id="persons"></div>
 	</div>
 
 	<script type="text/mustache" id="personTemplate">
-
+		<div class="person">
+			<header class="person__header">
+				<!--<img src="{{avatar}}" alt="" class="person__avatar">-->
+			</header>
+			<div class="person__info">
+				<h3 class="person__name">{{username}}</h3>
+				<ul class="person__info-list">
+					<li class="person__info-item">
+						<span class="person__label">
+							e-mail:
+						</span>
+						<span class="person__value">
+							{{email}}
+						</span>
+					</li>
+					<li class="person__info-item">
+						<span class="person__label">
+							phone:
+						</span>
+						<span class="person__value">
+							{{phone}}
+						</span>
+					</li>
+				</ul>
+			</div>
+		</div>
 	</script>
 
 	<script src="bower_components/jquery/dist/jquery.js"></script>

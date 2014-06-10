@@ -6,3 +6,75 @@ body {
   width: 800px;
   margin: 0 auto;
 }
+.search {
+  margin-bottom: 20px;
+}
+.btn {
+  height: 40px;
+  border: none;
+  background: #3466ff;
+  font-size: 14px;
+  padding: 10px 20px;
+  -webkit-transition: background 0.3s;
+  -moz-transition: background 0.3s;
+  -o-transition: background 0.3s;
+  -ms-transition: background 0.3s;
+  transition: background 0.3s;
+  color: #fff;
+  cursor: pointer;
+}
+.btn:hover {
+  background: #5d85ff;
+}
+.input {
+  padding: 0;
+  margin: 0;
+  border: solid 1px #ccc;
+  font-size: 16px;
+  padding: 10px 20px;
+}
+.input:focus {
+  outline: none;
+}
+.person__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.person__item {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 20px;
+  border: solid 1px #565656;
+}
+.person__header {
+  float: left;
+}
+.person__name {
+  width: 100%;
+}
+.person__avatar {
+  width: 128px;
+  height: 128px;
+  background: #ccc;
+  margin-right: 20px;
+  border: solid 5px #fff;
+  -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+}
+.person__info {
+  float: left;
+}
+.person__info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.person__info-item {
+  display: block;
+  margin-bottom: 10px;
+}
+.person__label {
+  font-weight: bold;
+}
