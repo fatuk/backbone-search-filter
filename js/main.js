@@ -3,32 +3,37 @@ $(function() {
     App.Views = {};
     App.Models = {};
     App.Collections = {};
+    App.Helpers = {};
 
-    var test = {
-        name: 'Andrew'
-    };
-
-    console.log(_(test));
-
+    App.Helpers.TypeDelay = (function() {
+        var timer = 0;
+        return function(callback, ms) {
+            clearTimeout(timer);
+            timer = setTimeout(callback, ms);
+        };
+    })();
 
     App.Views.App = Backbone.View.extend({
         el: '#app',
         events: {
-            'blur #searchInput': 'search'
+            'keyup #searchInput': 'search'
         },
         initialize: function() {
             this.renderSorted(this.collection);
         },
         renderSorted: function(sorted) {
             this.searchCount = sorted._wrapped ? sorted._wrapped.length : sorted.length;
-            this.$('#persons').html('');
-            sorted.each(function(person) {
-                var personView = new App.Views.Person({
-                    model: person
-                });
-                this.$('#persons').append(personView.el);
-            }, this);
 
+            App.Helpers.TypeDelay(function() {
+                this.$('#persons').html('');
+                sorted.each(function(person) {
+                    var personView = new App.Views.Person({
+                        model: person
+                    });
+                    this.$('#persons').append(personView.el);
+                }, this);
+
+            }, 500);
             this.$('.js-searchCount').html(this.searchCount);
         },
         search: function(e) {
